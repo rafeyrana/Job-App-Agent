@@ -23,7 +23,7 @@ class LinkedInJobScraper:
         options = webdriver.ChromeOptions()
         options.add_argument('--disable-blink-features=AutomationControlled')
         options.add_argument('--start-maximized')
-        # options.add_argument('--headless')
+        options.add_argument('--headless')
         self.driver = webdriver.Chrome(options=options)
 
     def login(self):
@@ -208,7 +208,7 @@ def scrape_linkedin_job(job_urls, linkedin_email, linkedin_password):
         scraper.close()
 # Example usage
 if __name__ == "__main__":
-    job_urls = ["https://www.linkedin.com/jobs/collections/recommended/?currentJobId=4063006968"]
+    job_urls = ["https://www.linkedin.com/jobs/collections/recommended/?currentJobId=4062544591"]
     linkedin_email = os.getenv('LINKEDIN_EMAIL')
     linkedin_password = os.getenv('LINKEDIN_PASSWORD')
     
